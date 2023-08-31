@@ -23,4 +23,4 @@ const authModel = new mongoose.Schema(
   }
 );
 
-export default mongoose.model<iAuthData>("auths", authModel)
+export default mongoose.model<iAuthData>("auths", authModel);
