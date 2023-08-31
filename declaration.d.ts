@@ -1,1 +1,6 @@
 declare module "*dotenv"
+declare module "*express"
+declare module "*mongoose"
+declare module "*bcrypt"
+declare module "*cloudinary"
+declare module "*multer"
