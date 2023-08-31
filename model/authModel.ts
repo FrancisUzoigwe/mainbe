@@ -6,17 +6,24 @@ interface iAuth {
   address?: string;
   avatar?: string;
   avatarID?: string;
+  product?: [];
 }
 
 export interface iAuthData extends iAuth, mongoose.Document {}
 const authModel = new mongoose.Schema(
   {
     name: { type: String },
-    email: { type: String, },
+    email: { type: String },
     password: { type: String },
     address: { type: String },
     avatar: { type: String },
     avatarID: { type: String },
+    product: [
+      {
+        type: mongoose.Types.ObjectId,
+        ref: "products",
+      },
+    ],
   },
   {
     timestamps: true,
