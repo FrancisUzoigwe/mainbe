@@ -9,8 +9,8 @@ const realPort = port;
 
 mainApp(app);
 const Server = app.listen(realPort, () => {
-  console.log("Pluto ways is active on port", realPort);
   DB();
+  console.log("Pluto ways is active on port", realPort);
 });
 
 process.on("uncaughtException", (error) => {

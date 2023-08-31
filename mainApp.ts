@@ -3,6 +3,7 @@ import cors from "cors";
 import { STATUS, errorFile } from "./error/errorFile";
 import { errorHandler } from "./error/errorHandler";
 import auth from "./router/authRouter"
+import pro from "./router/productRouter"
 
 export const mainApp = (app: Application) => {
   app.use(express.json());
@@ -49,4 +50,5 @@ export const mainApp = (app: Application) => {
     }
   });
   app.use("/api/v1", auth)
+  app.use("/api/v1", pro)
 };

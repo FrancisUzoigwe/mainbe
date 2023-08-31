@@ -6,7 +6,7 @@ interface iAuth {
   address?: string;
   avatar?: string;
   avatarID?: string;
-  product?: [];
+  product?: {}[];
 }
 
 export interface iAuthData extends iAuth, mongoose.Document {}
