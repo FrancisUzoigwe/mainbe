@@ -1,9 +1,11 @@
 import express, {Router} from "express"
 import upload from "../config/multer"
-import { registerUser } from "../controller/Authcontroller"
+import { registerUser, signinUser, viewAll, viewOne } from "../controller/Authcontroller"
 
 
 const router = express.Router()
-router.route("/register").post(upload, registerUser)
-
-export default router
+router.route("/sign-up").post(upload, registerUser)
+router.route("/sign-in").post(signinUser)
+router.route("/:userID/view-one").get(viewOne)
+router.route("/view").get(viewAll)
+export default router  

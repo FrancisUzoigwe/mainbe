@@ -3,7 +3,7 @@ import express, { Request, Response, NextFunction } from "express";
 
 export const handleError = (
   error: errorFile,
-  res: Response,
+  res: Response
 ) => {
   return res.status(STATUS.OK).json({
     errorName: error.errorName,

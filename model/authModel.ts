@@ -12,7 +12,7 @@ export interface iAuthData extends iAuth, mongoose.Document {}
 const authModel = new mongoose.Schema(
   {
     name: { type: String },
-    email: { type: String, unique: true },
+    email: { type: String, },
     password: { type: String },
     address: { type: String },
     avatar: { type: String },
