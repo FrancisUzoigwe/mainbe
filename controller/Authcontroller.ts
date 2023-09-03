@@ -4,7 +4,6 @@ import multer from "../config/multer";
 import authModel from "../model/authModel";
 import bcrypt from "bcrypt";
 import { STATUS, errorFile } from "../error/errorFile";
-import { errorHandler } from "../error/errorHandler";
 
 export const registerUser = async (req: Request, res: Response) => {
   try {
@@ -20,6 +19,7 @@ export const registerUser = async (req: Request, res: Response) => {
       name,
       avatar: public_id,
       avatarID: secure_url,
+      
     });
     return res.status(STATUS.CREATED).json({
       message: "User created successfully",
